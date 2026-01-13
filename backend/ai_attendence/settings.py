@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-k^fs8gvd@6n8mre2sgtbi(^%t^p1#ptvutch6n7(&!z867fcby"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 MEDIA_ROOT = BASE_DIR / "temp_uploads"
 MEDIA_URL = "/media/"
@@ -52,8 +52,12 @@ INSTALLED_APPS = [
     
 ]
 
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     
     "corsheaders.middleware.CorsMiddleware",  # cors setup
