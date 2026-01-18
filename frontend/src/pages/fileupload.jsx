@@ -22,7 +22,7 @@ export default function FileUpload() {
              if(file){
               const formData= new FormData()
               formData.append("file",file)
-                 const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/upload/`,formData)
+                 const response = await axios.post("https://attendence-anomoly-detector.onrender.com/api/upload/",formData)
                  console.log(response.data)
                  setJob_id(response.data.job_id)
                 
@@ -43,7 +43,7 @@ export default function FileUpload() {
 
        try{
             setAnalysing(true)
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/analyze/`,{"job_id":job_id})
+            const response = await axios.post("https://attendence-anomoly-detector.onrender.com/api/analyze/",{"job_id":job_id})
             console.log(response.data);
             setSummary(response.data.summary)
             setStudents(response.data.students)
