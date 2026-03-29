@@ -28,7 +28,7 @@ function Dashboard(){
 
             <h1 class="text-3xl font-bold text-center mt-10 mb-10">AI Attendence Anomaly Detector ! </h1>
 
-            <div class="flex  justify-around items-center">
+            <div class=" flex md:flex flex-col md:flex-row  justify-around items-center">
                 <div class="flex flex-col gap-4 items-start">
                       <div class="flex flex-col gap-2 p-20   rounded-2xl bg-[linear-gradient(90deg,rgba(2,0,36,1)_0%,rgba(3,1,49,1)_38%,rgba(8,28,133,1)_76%,rgba(6,72,162,1)_88%,rgba(5,99,180,1)_100%)]">
                             <h2 class="text-3xl font-medium wrap-break-word md:w-110">Drop your csv file !
